@@ -35,7 +35,16 @@ done
 	grep -v "[?*]" | cut -d " " -f2 | \
 	tr ' ' '\n')" scp sftp ssh
 
+
+
+# Add tab completion for exercism commands
+# Make sure that the exercism_completion.bash file exists
+
+if [ -f ~/.config/exercism/exercism_completion.bash ]; then
+  . ~/.config/exercism/exercism_completion.bash
+fi
+
 # print a fortune when the terminal opens
-#fortune -a -s | lolcat
+fortune -a -s | lolcat
 
  NOW=$(date +"%m-%d-%Y")
